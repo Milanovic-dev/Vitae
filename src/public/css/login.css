@@ -1,0 +1,35 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);.bg {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  min-height: 100vh;
+  padding: 10px;
+  background: linear-gradient(90deg, #773eb8 0%, #8d42e3 100%);
+}
+
+.main-container {
+  margin-top: 55px;
+  padding: 30px;
+  text-align: center;
+  min-width: 500px;
+  height: 600px;
+  background-color: white;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 25px;
+  border-color: white;
+}
+
+.login-header {
+  color: black;
+  margin-bottom: 15px;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+}
+

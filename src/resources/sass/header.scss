@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+//#5E548E
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 1px solid rgb(201, 201, 201);
+    line-height: 40px;
+    font-size: 18px;
+}
+
+.navbar-brand {
+    font-size: 25px;
+    flex: 1;
+    align-self: flex-start;
+    margin-left: 20px;
+    font-weight: 600;
+    color: rgb(119,62,184);
+    cursor: pointer;
+}
+
+.navbar-options {
+    color: rgb(110, 110, 110);
+    flex: 2;
+    align-self: flex-end;
+    text-align: right;
+}
+
+.navbar-option {
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.separator {
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(175, 175, 175);
+}
