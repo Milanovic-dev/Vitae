@@ -1,9 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);.navbar {
+  position: -webkit-sticky;
+  position: sticky;
   display: flex;
   flex-direction: row;
   width: 100%;
   background-color: #ffffff;
-  border-bottom: 1px solid #c9c9c9;
+  border-bottom: 1px solid #d1d1d1;
   line-height: 40px;
   font-size: 18px;
 }
@@ -12,17 +14,39 @@
   font-size: 25px;
   flex: 1;
   align-self: flex-start;
-  margin-left: 20px;
-  font-weight: 600;
-  color: #773eb8;
+  font-weight: 700;
+  color: #5f25bd;
   cursor: pointer;
 }
 
-.navbar-options {
-  color: #6e6e6e;
-  flex: 2;
-  align-self: flex-end;
+.navbar-links {
   text-align: right;
+}
+
+.navbar-hamburger {
+  cursor: pointer;
+}
+
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 0px;
+  background-color: #73449e;
+  transition: 0.8s;
+}
+
+.hamburger-option {
+  padding: 20px;
+  flex: 1;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+}
+
+.hamburger-option:hover {
+  color: white;
+  text-decoration: none;
 }
 
 .navbar-option {
@@ -33,6 +57,22 @@
 .separator {
   border-width: 1px;
   border-style: solid;
-  border-color: #afafaf;
+  border-color: black;
+}
+
+@media (min-width: 768px) {
+  .navbar-hamburger {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
 }
 

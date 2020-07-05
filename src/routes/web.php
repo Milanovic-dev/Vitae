@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\PathController;
 use App\Resume;
 use App\ResumeTemplate;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,13 +17,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/login', function () {
-    return view('login');
-});
+//Views
+Route::get('/', 'PathController@home');
+Route::get('/login', 'PathController@login');
+Route::get('/dashboard', 'PathController@dashboard');
+Route::get('/dashboard/create', 'PathController@create');
 
-Route::get('auth/{provider}', 'Auth\AuthController@redirectToProvider');
-Route::get('auth/{provider}/callback', 'Auth\AuthController@handleProviderCallback');
+//Requests
+Route::get('auth/social/{provider}', 'AuthController@redirectToProvider');
+Route::get('auth/social/{provider}/callback', 'AuthController@handleProviderCallback');
+Route::post('auth/login', 'AuthController@attemptLogin');
+Route::get('auth/logout', 'AuthController@logout');
